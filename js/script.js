@@ -23,7 +23,7 @@ document.querySelector("#shopping-cart-button").onclick = (e) => {
 };
 
 // Klik di luar elemen
-const hm = document.querySelector("#menu");
+const hm = document.querySelector("#hamburger-menu");
 const sb = document.querySelector("#search-button");
 const sc = document.querySelector("#shopping-cart-button");
 const tabLinks = document.querySelectorAll(".tabs a");
@@ -59,6 +59,14 @@ document.addEventListener("click", function (e) {
 
   if (!sc.contains(e.target) && !shoppingCart.contains(e.target)) {
     shoppingCart.classList.remove("active");
+  }
+
+  if (!tabLinks.contains(e.target) && !parentList.contains(e.target)) {
+    parentList.classList.remove("active");
+  }
+
+  if (!tabPanels.contains(e.target) && !panel.contains(e.target)) {
+    panel.classList.remove("active");
   }
 });
 
